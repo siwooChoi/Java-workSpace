@@ -1,0 +1,15 @@
+
+public class pre0919 {
+	
+	// int ดย 4byte
+	int a = 0x0f000000;
+	
+	a = a>>24;
+		
+	public static void main(String[] args) {
+		
+		pre0919 p = new pre0919();
+		
+		System.out.println(p.a);
+	}
+}

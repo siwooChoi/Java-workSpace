@@ -1,0 +1,13 @@
+package Anonymousclass;
+
+public class MainClass extends Frame implements MouseMotionListener{
+	
+	int x = 0;
+	int y = 0;
+	
+	public static void main(String[] args){
+		
+		new MainClass("È£½Ã");
+		
+	}
+}

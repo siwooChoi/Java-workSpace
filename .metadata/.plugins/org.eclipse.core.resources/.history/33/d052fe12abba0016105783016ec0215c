@@ -1,0 +1,29 @@
+package nest;
+
+class A{
+	int value = 18;
+	
+	class B {
+		void increaseValue(){
+			value++;
+		}
+	}
+}
+
+public class Q50 {
+	public static void main(String[] args()){
+		
+	
+	A varA = new A();
+	System.out.println(varA.value);
+	
+	A.B varB1 = varA.new B();
+	varB1.increaseValue();
+	System.out.println(varA.value);
+	
+	A.B varB2 = varA.new B();
+	varB1.increaseValue();
+	System.out.println(varA.value);
+	
+	}
+}

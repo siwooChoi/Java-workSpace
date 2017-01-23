@@ -1,0 +1,19 @@
+package cyka2;
+
+
+class A{
+	public static void main(String[] args){
+
+	for(int x = 0; x <=5; x++){
+		for(int y = 0; y < 9; y++){
+			if(x <= y && y <= (10-x)){
+				System.out.print("*");
+			} else{
+				System.out.print(" ");
+			}
+		}
+		System.out.println("");
+	}
+
+  }
+}

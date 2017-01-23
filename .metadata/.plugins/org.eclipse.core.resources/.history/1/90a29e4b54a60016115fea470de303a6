@@ -1,0 +1,10 @@
+package classLocal;
+
+public abstract class A{
+
+	
+	
+	
+	void abmethod();
+	
+}

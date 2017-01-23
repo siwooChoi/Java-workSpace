@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;nest&apos; to &apos;NesedClass&apos;&#x0D;&#x0A;- Original project: &apos;Prec&apos;&#x0D;&#x0A;- Original element: &apos;Prec/src/nest&apos;&#x0D;&#x0A;- Renamed element: &apos;Prec/src/NesedClass&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;nest&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;nest" name="NesedClass" qualified="false" references="true" stamp="1480916543632" textual="false" version="1.0"/>
+</session>

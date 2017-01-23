@@ -1,0 +1,21 @@
+package exceptionPrec;
+
+class ex{
+	
+}
+
+
+public class exclass {
+	public static void main(String[] args){
+		boolean a = false;
+		boolean b = true;
+		
+		try{
+			
+		} catch(Exception e){
+			
+		}
+		
+	}
+}
+

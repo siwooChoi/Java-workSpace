@@ -1,0 +1,32 @@
+package exceptionPrec;
+
+class qqq {
+	boolean a = false;
+	boolean b = true;
+	
+
+
+	try {
+	  if (a == true) {
+	     System.out.println("문제 준다.");
+	     throw new Exception(e);
+	  } else {
+	     System.out.println("유감");
+	  }
+	} catch(Exception e){
+	    System.out.println("이렇게 쓰는게 맞던가");
+	    System.out.println("문제 응시자 중 1명 2개틀림");
+	    System.out.println("문제 응시자 중 1명 11개틀림");
+	    System.out.println("문제 응시자 중 3명 평균15 개틀림");
+	}
+	
+}
+
+
+public class exclass {
+	public static void main(String[] args){
+		qqq q = new qqq();
+		
+	}
+}
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;StarC.Sc&apos; to &apos;Scv&apos;&#x0D;&#x0A;- Original project: &apos;MyPrectice1&apos;&#x0D;&#x0A;- Original element: &apos;StarC.Sc&apos;&#x0D;&#x0A;- Renamed element: &apos;StarC.Scv&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Sc&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;StarC{Sc.java[Sc" matchStrategy="1" name="Scv" qualified="false" references="true" similarDeclarations="false" stamp="1476078412745" textual="false" version="1.0"/>
+</session>
