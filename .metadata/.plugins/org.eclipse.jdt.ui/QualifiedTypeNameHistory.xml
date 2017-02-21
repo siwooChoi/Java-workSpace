@@ -34,4 +34,9 @@
 <fullyQualifiedTypeName name="java.awt.event.MouseEvent"/>
 <fullyQualifiedTypeName name="java.awt.event.MouseMotionListener"/>
 <fullyQualifiedTypeName name="java.awt.Frame"/>
+<fullyQualifiedTypeName name="view.mainBoard"/>
+<fullyQualifiedTypeName name="view.MainBoard"/>
+<fullyQualifiedTypeName name="controller.Controller"/>
+<fullyQualifiedTypeName name="model.MainModel"/>
+<fullyQualifiedTypeName name="index.Index"/>
 </qualifiedTypeNameHistroy>

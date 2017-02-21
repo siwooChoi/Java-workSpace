@@ -1,0 +1,9 @@
+package controller;
+
+public class MainController {
+	protected int conValue = 3;
+	
+	public MainController() {
+		System.out.println("컨트롤러 객체 만들어졌음");
+	}
+}

@@ -1,0 +1,8 @@
+import view.*;
+
+public class Index {
+	public static void main(String[] args){
+		view.mainBoard mainBoard = new view.MainBoard();
+		
+	}
+}

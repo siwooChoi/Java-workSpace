@@ -1,0 +1,12 @@
+import view.*;
+import model.*;
+import controller.*;
+
+public class Index {
+	public static void main(String[] args){
+		controller.Controller mainController = new controller.Controller();
+		view.MainView 		  mainView  = new view.MainView();
+		model.MainModel		  mainModel  = new model.MainModel();
+		
+	}
+}

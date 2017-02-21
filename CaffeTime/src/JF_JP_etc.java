@@ -90,20 +90,20 @@ public class JF_JP_etc implements ComponentSize{
 		
 		panel = new JPanel(){ImageIcon i = new ImageIcon("img/bg3.png");	
 		public void paintComponent(Graphics g) {
-			g.drawImage(i.getImage(), 0, 0, FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT, null);
-		}
+				g.drawImage(i.getImage(), 0, 0, FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT, null);
+			}
 		};
 		
 		
 		gOver = new JButton(){ImageIcon i = new ImageIcon("img/GameOver.png");	
 		public void paintComponent(Graphics g) {
-			g.drawImage(i.getImage(), 0, 0, FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT, null);
-		}
+				g.drawImage(i.getImage(), 0, 0, FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT, null);
+			}
 		};
 		
 		
 		
-		//   메인화면 전,  화면클릭하세요.  버튼
+//		   메인화면 전,  화면클릭하세요.  버튼
 		StartButton = new JButton(){ImageIcon i = new ImageIcon("img/update_bg2.png");	
 		public void paintComponent(Graphics g) {
 			g.drawImage(i.getImage(), 0, 0, FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT, null);

@@ -1,0 +1,20 @@
+
+
+import model.*;
+import controller.*;
+import view.*;
+
+public class Index {
+	protected Controller	controller  = new Controller();
+	protected View 			view		= new View();
+	protected Model			model		= new Model();
+	
+	
+	public static void main(String[] args){
+		Index index = new Index();
+		
+
+		System.out.println("인덱스에서 문자열 출력");
+		
+	}
+}

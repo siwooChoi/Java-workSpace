@@ -1,0 +1,18 @@
+package index;
+
+import model.*;
+import controller.*;
+import view.*;
+
+public class Index {
+	MainController	mainController  = new MainController();
+	MainView 		mainView		= new MainView();
+	MainModel		mainModel		= new MainModel();
+	
+	public static void main(String[] args){
+		Index index = new Index();
+		
+		System.out.println(mainModel.modelValue);
+		
+	}
+}

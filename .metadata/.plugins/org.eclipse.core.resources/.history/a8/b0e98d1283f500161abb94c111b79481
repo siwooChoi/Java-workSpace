@@ -1,0 +1,15 @@
+package index;
+import view.*;
+import model.*;
+import controller.*;
+
+public class Index {
+	controller.MainController mainController = new controller.MainController();
+	MainView 		  	  mainView 		 = new MainView();
+	model.MainModel		  	  mainModel  	 = new model.MainModel();
+	
+	public static void main(String[] args){
+		
+		
+	}
+}

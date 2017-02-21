@@ -1,0 +1,15 @@
+package model;
+
+public class intialValue {
+	//////	º¯¼ö //////
+	public int waterValue = 0;
+	public int coffeeValue = 0;
+	public int milkValue = 0;
+	public int syrupValue = 0;
+	public int caramelValue = 0;
+	public int steamValue = 0;
+	public int scoreValue = 0;
+	public String messageValue = "";
+	public int messageIndexCount = 0;
+	public int bombCount = 2;
+}
