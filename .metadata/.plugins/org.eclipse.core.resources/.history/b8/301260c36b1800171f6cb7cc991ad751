@@ -1,0 +1,27 @@
+package coffeeValues;
+
+import java.util.ArrayList;
+
+import main.cafeTime;
+import panels.playPage;
+
+public class coffeeData extends playPage{
+	private cafeTime F;
+	
+
+	protected ArrayList recipe;
+	protected String[] Type = {"Coffee", "Water", "Milk", "Syrup", "Caramel", "Steam"};
+	
+
+	
+	protected ArrayList getRecipe(){
+		recipe.add("test");
+		
+		return recipe;
+	}
+	
+	
+	
+	
+	
+}

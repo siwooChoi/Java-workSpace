@@ -1,0 +1,57 @@
+package Panels;
+
+import java.awt.Graphics;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
+import interfaces.FramePanelSetting;
+
+public class Buttons extends JButton implements FramePanelSetting{
+	private String imgName;
+	private ImageIcon i;
+	private Graphics g;
+	
+	public Buttons(String type, String argImgName, int x, int y){
+		if(type == "a"){
+//			this.i = new ImageIcon(argImgName);
+			paintControlButton(g);
+//			setBounds(x, y, VALUE_BTN_WIDTH, VALUE_BTN_HEIGHT);
+			
+			this.i = new ImageIcon(argImgName);
+			setBounds(x, y, VALUE_BTN_WIDTH, VALUE_BTN_HEIGHT);
+		}
+	}
+	
+	public Buttons(String argImgName, int x, int y){
+		this.i = new ImageIcon(argImgName);
+		setBounds(x, y, VALUE_BTN_WIDTH, VALUE_BTN_HEIGHT);
+		
+	}
+	
+	public Buttons(String argImgName, int x, int y, int width, int height){
+		this.i = new ImageIcon(argImgName);
+		setBounds(x, y, width, height);
+		
+	}
+
+	
+	
+//	ImageIcon i = new ImageIcon(imgName);
+	public void paintValueButton(Graphics g) {
+		g.drawImage(this.i.getImage(), 0, 0, VALUE_BTN_WIDTH, VALUE_BTN_HEIGHT, null);
+		System.out.println("밸류버튼 클릭");
+	}
+	
+	public void paintControlButton(Graphics g) {
+		g.drawImage(this.i.getImage(), 0, 0, VALUE_BTN_WIDTH, VALUE_BTN_HEIGHT, null);
+		System.out.println("컨트롤버튼 클릭");
+	}
+	
+	
+	
+	
+	
+
+}

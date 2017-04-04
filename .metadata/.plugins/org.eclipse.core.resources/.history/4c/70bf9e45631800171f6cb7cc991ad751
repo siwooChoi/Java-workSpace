@@ -1,0 +1,23 @@
+package thread;
+
+import main.cafeTime;
+import panels.playPage;
+
+public class playThread implements Runnable{
+
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+//		int i = 0;
+//		System.out.println(i);
+//		i++;public void run() {
+      
+                System.out.println(i);
+        
+    }
+
+
+	
+
+}

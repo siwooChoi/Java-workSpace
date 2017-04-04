@@ -1,0 +1,18 @@
+package Panels;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JLabel;
+
+public class Labels extends JLabel{
+	
+	public Labels(String LabelName, int value, int x, int y){
+		this.setText("LabelName : " + value);
+		setFont(new Font("Dialog",Font.BOLD ,20));
+		setForeground(Color.WHITE);
+		setBounds(x, y, 150, 20);
+	}
+
+
+}

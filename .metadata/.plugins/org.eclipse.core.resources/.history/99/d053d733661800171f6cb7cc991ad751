@@ -1,0 +1,24 @@
+package coffeeValues;
+
+import java.util.ArrayList;
+
+import main.cafeTime;
+
+public class Amaricano extends coffeeData{
+	
+	 = {Type[0], Type[1]};
+	
+	
+	public Amaricano(cafeTime f) {
+		super(f);
+	}
+	
+	/*public ArrayList getRecipe(){
+		
+		
+		
+	}*/
+	
+	
+	
+}

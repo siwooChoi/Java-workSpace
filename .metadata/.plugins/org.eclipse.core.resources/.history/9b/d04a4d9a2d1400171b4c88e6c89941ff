@@ -1,0 +1,38 @@
+package main;
+
+import java.awt.CardLayout;
+import javax.swing.*;
+
+import Panels.*;
+import interfaces.*;
+
+public class cafeTime extends gameManager implements FramePanelSetting{
+	private JFrame frame;
+	private gameManager player = new gameManager();
+	private CardLayout cards = new CardLayout();
+	
+	public cafeTime(){
+		frame.setSize(PANEL_WIDTH, PANEL_HEIGHT);
+		frame.getContentPane().setLayout(cards);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
+		
+		// 가장 처음 add한 Page가 첫화면으로 실행된다.
+		
+		
+		
+		frame.getContentPane().add("show", new showPage(this));
+		frame.getContentPane().add("info", new infoPage(this));
+		frame.getContentPane().add("play", new playPage(this));
+		frame.getContentPane().add("result", new resultPage(this));
+		
+		
+		
+		
+		frame.setVisible(true);
+	}
+	
+	public CardLayout getCardLayout(){
+		return cards;
+	}
+}

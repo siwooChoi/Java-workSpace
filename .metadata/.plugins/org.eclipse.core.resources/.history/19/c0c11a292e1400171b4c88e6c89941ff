@@ -1,0 +1,10 @@
+package main;
+
+public class gameManager extends JFrame{
+	cafeTime cafeTime;
+	
+	public void cafeOpen(){
+		 this.cafeTime = new cafeTime();
+	}
+	
+}

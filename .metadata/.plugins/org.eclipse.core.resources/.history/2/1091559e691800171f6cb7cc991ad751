@@ -1,0 +1,23 @@
+package coffeeValues;
+
+import panels.playPage;
+
+import java.util.ArrayList;
+
+import main.cafeTime;
+
+public class coffeeData extends playPage{
+
+	
+	public coffeeData(cafeTime f) {
+		super(f);
+		// TODO Auto-generated constructor stub
+	}
+	
+//	
+	
+	
+	
+	
+	
+}

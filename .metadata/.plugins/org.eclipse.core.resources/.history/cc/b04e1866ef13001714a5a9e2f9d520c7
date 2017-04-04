@@ -1,0 +1,71 @@
+package Panels;
+
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+import interfaces.FramePanelSetting;
+import main.cafeTime;
+
+public class showPage extends JPanel implements FramePanelSetting{
+	private JButton infoBtn;
+	private JButton startBtn;
+	private cafeTime  F;
+	
+	public showPage(cafeTime f){
+		
+		
+		ImageIcon ic = new ImageIcon("img/bg2.png");
+	    Image image1 = ic.getImage();
+	    this.drawImage(image1, 100, 100, null);
+	    
+		setBackground(Color.LIGHT_GRAY);
+		setSize(FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT);
+		setLayout(null);
+		
+		F = f;
+		
+		
+		startBtn = new JButton("Game Start");
+		startBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+//				F.changePanel();
+//				F.getCardLayout().show(F.getContentPane(), "info");
+				System.out.println("start");
+			}
+		});
+		startBtn.setBounds(100, 150, START_INFO_WIDTH, START_INFO_HEIGHT);
+		add(startBtn);
+		
+		setVisible(true);
+		
+		
+		infoBtn = new JButton("Game Info");
+		infoBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+//				F.changePanel();
+				F.getCardLayout().show(F.getContentPane(), "info");
+			}
+		});
+		infoBtn.setBounds(100, 260, START_INFO_WIDTH, START_INFO_HEIGHT);
+		add(infoBtn);
+		
+		
+		
+	}
+
+	private void drawImage(Image image1, int i, int j, Object object) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+		
+	
+	
+	
+	
+}

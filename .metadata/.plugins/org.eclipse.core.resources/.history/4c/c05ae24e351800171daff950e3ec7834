@@ -1,0 +1,9 @@
+package Panels;
+
+import javax.swing.JButton;
+
+import interfaces.FramePanelSetting;
+
+public class controlBtns  extends JButton implements FramePanelSetting{
+
+}

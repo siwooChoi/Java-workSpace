@@ -1,0 +1,28 @@
+package thread;
+
+import coffeeValues.Amaricano;
+import main.cafeTime;
+import panels.playPage;
+
+public class playThread extends playPage implements Runnable{
+
+	public playThread(cafeTime f) {
+		super(f);
+		// TODO Auto-generated constructor stub
+	}
+	public boolean flag = true;
+	@Override
+	public void run() {
+		
+		// TODO Auto-generated method stub
+//		int i = 0;
+//		System.out.println(i);
+//		i++;public void run() {
+		Amaricano a = new Amaricano(F);
+        
+    }
+
+
+	
+
+}

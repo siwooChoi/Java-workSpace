@@ -1,0 +1,17 @@
+package coffeeValues;
+
+import panels.playPage;
+import main.cafeTime;
+
+public class coffeeData extends playPage{
+
+	protected String[] recipe;
+	
+	public coffeeData(cafeTime f) {
+		super(f);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+}

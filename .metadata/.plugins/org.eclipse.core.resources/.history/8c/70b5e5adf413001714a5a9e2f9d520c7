@@ -1,0 +1,11 @@
+package interfaces;
+
+public interface FramePanelSetting {
+	
+	int PANEL_WIDTH  = 800;
+	int PANEL_HEIGHT = 600;
+	
+	// StartButton, InfoButton Size
+	int START_INFO_WIDTH  = 200;
+	int START_INFO_HEIGHT = 80;
+}

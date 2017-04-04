@@ -1,0 +1,17 @@
+package Panels;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JLabel;
+
+public class Labels extends JLabel{
+	public Labels(int value){
+		this.setText("coffee : " + value);
+		setFont(new Font("Dialog",Font.BOLD ,20));
+		setForeground(Color.WHITE);
+		setBounds(30, 17, 150, 20);
+	}
+
+
+}

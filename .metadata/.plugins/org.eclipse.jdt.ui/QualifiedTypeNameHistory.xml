@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="TrdGameOver"/>
 <fullyQualifiedTypeName name="NValues"/>
 <fullyQualifiedTypeName name="cyka"/>
 <fullyQualifiedTypeName name="setPrec.PrecOfMain"/>
@@ -25,7 +24,6 @@
 <fullyQualifiedTypeName name="classLocal.a.testa"/>
 <fullyQualifiedTypeName name="java.lang.InstantiationError"/>
 <fullyQualifiedTypeName name="exceptionPrec2.InvalidInputValue"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="nest.A"/>
 <fullyQualifiedTypeName name="nest.A.B"/>
 <fullyQualifiedTypeName name="nest.A.B.C"/>
@@ -33,10 +31,33 @@
 <fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="java.awt.event.MouseEvent"/>
 <fullyQualifiedTypeName name="java.awt.event.MouseMotionListener"/>
-<fullyQualifiedTypeName name="java.awt.Frame"/>
 <fullyQualifiedTypeName name="view.mainBoard"/>
 <fullyQualifiedTypeName name="view.MainBoard"/>
-<fullyQualifiedTypeName name="controller.Controller"/>
 <fullyQualifiedTypeName name="model.MainModel"/>
 <fullyQualifiedTypeName name="index.Index"/>
+<fullyQualifiedTypeName name="controller.Controller"/>
+<fullyQualifiedTypeName name="a.test1"/>
+<fullyQualifiedTypeName name="main.main"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.awt.Toolkit"/>
+<fullyQualifiedTypeName name="javax.tools.JavaCompiler"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="view.View"/>
+<fullyQualifiedTypeName name="view.Buttons"/>
+<fullyQualifiedTypeName name="actions.StartEvent"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="java.awt.CardLayout"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="view.FramePanelSetting"/>
+<fullyQualifiedTypeName name="java.awt.peer.FramePeer"/>
+<fullyQualifiedTypeName name="Panels.showPage"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.awt.Frame"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="interfaces.FramePanelSetting"/>
+<fullyQualifiedTypeName name="main.gameManager"/>
+<fullyQualifiedTypeName name="coffeeValues.Amaricano"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

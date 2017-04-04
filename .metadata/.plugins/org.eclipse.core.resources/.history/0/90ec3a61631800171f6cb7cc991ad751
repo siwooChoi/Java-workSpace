@@ -1,0 +1,28 @@
+package thread;
+
+import main.cafeTime;
+import panels.playPage;
+
+public class playThread implements Runnable{
+
+	public boolean flag = true;
+	public static int a = 1;
+	@Override
+	public void run() {
+		
+		// TODO Auto-generated method stub
+//		int i = 0;
+//		System.out.println(i);
+//		i++;public void run() {
+		while(flag){
+			
+                System.out.println(i);
+               i++; 
+		}
+        
+    }
+
+
+	
+
+}

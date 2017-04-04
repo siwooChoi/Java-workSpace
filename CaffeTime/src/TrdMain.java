@@ -13,17 +13,7 @@ public class TrdMain implements Runnable{
 		public static Message message = new Message(new ArrayList());
 		public static boolean threadStop = true;
 		
-		
-	
-
 		public void run() {		// 랜덤한 시간으로 실행이 된다.
-			 
-			
-			
-			
-			
-			
-			
 			while(threadStop == true){
 				
 				if(threadStop) {
@@ -116,8 +106,8 @@ public class TrdMain implements Runnable{
 		           	
 		           		
 		           	
-		           	//else if(asdf ) 
-		          //threadStop = false;
+//		           	else if(asdf ) 
+//		          threadStop = false;
 		}
 		
 			
@@ -156,7 +146,7 @@ public class TrdMain implements Runnable{
 //			} else if (trd_o_list.oList.size() == 4) {
 //				JF_JP_etc.order4.setText(trd_c_list.cList.get(listIndex));
 //			}
-			
+//			
 			
 			
 		

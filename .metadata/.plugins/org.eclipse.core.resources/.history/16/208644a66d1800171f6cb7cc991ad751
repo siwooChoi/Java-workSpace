@@ -1,0 +1,12 @@
+package main;
+
+public class index {
+	public static void main(String[] args){
+		cafeTime player = new cafeTime();
+//		gameManager player = new gameManager();
+//		player.cafeOpen();
+		
+		playThread playThread = new playThread(f);
+		Thread thread = new Thread(playThread);
+	}
+}

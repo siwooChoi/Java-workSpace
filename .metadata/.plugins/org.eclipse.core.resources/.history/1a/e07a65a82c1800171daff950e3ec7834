@@ -1,0 +1,28 @@
+package Panels;
+
+import java.awt.Color;
+import java.awt.Font;
+
+public class Labels {
+	public Labels(value){
+		this.setText("coffee : " + value);
+		this.setFont(new Font("Dialog",Font.BOLD ,20));
+		this.setForeground(Color.WHITE);
+		this.setBounds(30, 17, 150, 20);
+	}
+
+	private void setBounds(int i, int j, int k, int l) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setForeground(Color white) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setFont(Font font) {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -2,57 +2,33 @@ package view;
 
 import java.awt.Graphics;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
-public class View{
+public class View implements FramePanelSetting {
+
+	JFrame frame;
+	Panels panel;
 	
-
+	// ìƒì„±ì, ê¸°ë³¸í”„ë ˆì„ ìƒì„±  / (J) ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§ã€€ãƒ™ãƒ¼ã‚¹frameã‚’ã€€ä½œã‚‹ã€‚
 	public View(){
-		System.out.println("ºä °´Ã¼ »ı¼ºÀÚ");
-		int FRAME_PANEL_WIDTH = 800;
-		int FRAME_PANEL_HEIGHT = 600;
+		System.out.println("Viewê°ì²´ ìƒì„±ì");
+		this.frame = new JFrame();
+		this.panel = new Panels();
+	}
+	
+	public void start(){
+		this.frame.setTitle("CaffeTime ver.2");
+		this.frame.setSize(FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT);
+		this.frame.setResizable(false);
+		
+			// ì°½ë‹«ê¸° ë²„íŠ¼ìœ¼ë¡œ ì‹¤í–‰ì¢…ë£Œ / (J) closeã§ã€€ãƒ—ãƒ­ã‚»ã‚¹ã‚’çµ‚äº†ã•ã›ã‚‹
+		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
+		this.panel.StartPanel();
+		this.frame.add(this.panel.startPanel);
 		
 		
-		
-		JFrame frame = new JFrame();
-		
-		JPanel panel = new JPanel(){
-			ImageIcon imgIcon = new ImageIcon("img/bg3.png");	
-			
-			public void paintComponent(Graphics g) {
-				g.drawImage(imgIcon.getImage(), 0, 0, FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT, null);
-			}
-		};
-		
-		
-		
-		panel.setBounds(0, 0, FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT);
-		panel.setLayout(null);
-		
-		frame.setLayout(null);
-		frame.setBounds(400,70,FRAME_PANEL_WIDTH,FRAME_PANEL_HEIGHT); // Ã¢ ¿ÀÇÂÀ§Ä¡ ÁöÁ¤
-		frame.setTitle("CaffeTime ver.2");
-		frame.setResizable(false);								// Ã¢ Å©±â º¯°æ ºÒ°¡
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// Ã¢´İ±â ¹öÆ°À¸·Î ½ÇÇàÁ¾·á
-		
-		
-		
-		
-//		JButton StartButton = new JButton(){ImageIcon i = new ImageIcon("img/update_bg2.png");	
-//		public void paintComponent(Graphics g) {
-//			g.drawImage(i.getImage(), 0, 0, FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT, null);
-//		}
-//		};
-//		StartButton.setBounds(0, 0, FRAME_PANEL_WIDTH, FRAME_PANEL_HEIGHT);
-//		frame.add(StartButton);
-//		StartButton.addActionListener(new Click_Events());
-//		
-		
-		
-		frame.setVisible(true);
+		this.frame.setVisible(true);
 	}
 	
 }

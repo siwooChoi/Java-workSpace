@@ -1,0 +1,9 @@
+package main;
+
+public class gameManager{
+	cafeTime cafeTime;
+	public gameManager(){
+		 this.cafeTime = new cafeTime();
+	}
+	
+}
