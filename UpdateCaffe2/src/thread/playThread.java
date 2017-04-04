@@ -8,15 +8,16 @@ import panels.playPage;
 
 public class playThread extends playPage implements Runnable{
 
-	cafeTime F;
+	cafeTime cafeTimeObj;
+	playPage playPageObj;
 	Amaricano a;
-	playPage playPage;
+	
 	
 	public boolean flag = true;
 	
-	public playThread(cafeTime f, playPage playPage){
-		super(f);
-		playPage = playPage;
+	public playThread(cafeTime cafeTimeObj){
+		super(cafeTimeObj);
+		this.cafeTimeObj = cafeTimeObj;
 	}
 	
 	
@@ -25,7 +26,7 @@ public class playThread extends playPage implements Runnable{
 		
 		System.out.println("스레드 시작");
 		
-		playPage = getPlayPage();
+		playPageObj = cafeTimeObj.getPlayPage();
 		
 		while(flag){
 			if(flag) {
@@ -38,8 +39,8 @@ public class playThread extends playPage implements Runnable{
 	         
 	                for(int i = secs; i >= 0; i--) {
 	                	System.out.println("(" + i + "초 후에 주문이 들어옵니다.)");
-	                	playPage.timeLab.setText("(" + i + "초 후에 주문이 들어옵니다.)");
-	                	Timeset(5);
+//	                	playPageObj.timeLab.setText("(" + i + "초 후에 주문이 들어옵니다.)");
+	                	playPageObj.Timeset(i);
 	                	
 	                	
 	                

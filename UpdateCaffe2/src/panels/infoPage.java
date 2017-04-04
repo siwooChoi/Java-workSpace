@@ -17,11 +17,11 @@ public class infoPage extends JPanel implements FramePanelSetting{
 	private cafeTime  F;
 	
 //	public infoPage(){};
-	public infoPage(cafeTime f){
+	public infoPage(cafeTime cafeTimeObj){
 		setSize(PANEL_WIDTH, PANEL_HEIGHT);
 		setLayout(null);
 		
-		F = f;
+//		F = f;
 		
 		// test
 		

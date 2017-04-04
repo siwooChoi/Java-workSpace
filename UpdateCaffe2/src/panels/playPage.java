@@ -19,7 +19,7 @@ import thread.playThread;
 
 public class playPage extends JPanel implements FramePanelSetting{
 	
-	private cafeTime F;
+//	private cafeTime cafeTimeObj;
 	
 	public JLabel timeLab, order1, order2, order3, order4;
 	
@@ -51,7 +51,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 	
 
 	
-	public playPage(cafeTime f){
+	public playPage(cafeTime cafeTimeObj){
 		
 		
 		
@@ -60,7 +60,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		setSize(PANEL_WIDTH, PANEL_HEIGHT);
 		setLayout(null);
 		
-		F = f;
+//		F = f;
 //		coffeeData = new coffeeData();
 		
 		
@@ -228,13 +228,11 @@ public class playPage extends JPanel implements FramePanelSetting{
 	}
 	
 	public void Timeset(int time){
-		timeLab.setText(time + "로 변경 성공");
-		System.out.println("...");
+//		timeLab.setText(time + "로 변경 성공");
+		timeLab.setText("(" + time + "초 후에 주문이 들어옵니다.)");
+//		System.out.println("...");
 	}
 	
-	public playPage getPlayPage(){
-		return this;
-	}
 
 
 //	public void startThread(){

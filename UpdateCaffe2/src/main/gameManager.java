@@ -3,7 +3,7 @@ package main;
 import javax.swing.JFrame;
 
 public class gameManager extends JFrame{
-	gameManager cafeTime;
+//	gameManager cafeTime;
 	
 	public void cafeOpen(){
 		

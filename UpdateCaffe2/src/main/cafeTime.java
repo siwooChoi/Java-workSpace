@@ -80,8 +80,8 @@ public class cafeTime extends gameManager implements FramePanelSetting{
 		return cards;
 	}
 	
-	public void startThread(playPage playPage){
-		playThread = new playThread(this, playPage);
+	public void startThread(cafeTime cafeTimeObj){
+		playThread = new playThread(cafeTimeObj);
 		thread = new Thread(playThread);
 		thread.start();
 	}

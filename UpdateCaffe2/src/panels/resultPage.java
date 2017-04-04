@@ -16,11 +16,11 @@ public class resultPage extends JPanel implements FramePanelSetting{
 	
 	
 //	public resultPage(){};
-	public resultPage(cafeTime f){
+	public resultPage(cafeTime cafeTimeObj){
 		setSize(PANEL_WIDTH, PANEL_HEIGHT);
 		setLayout(null);
 		
-		F = f;
+//		F = f;
 		
 		
 	}

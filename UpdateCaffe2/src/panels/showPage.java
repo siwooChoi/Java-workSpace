@@ -15,18 +15,14 @@ import thread.playThread;
 public class showPage extends JPanel implements FramePanelSetting{
 	private JButton  infoBtn;
 	private JButton  startBtn;
-	private cafeTime F;
-	public playPage playPage;
+//	private cafeTime cafeTimeObj;
+	
 	
 //	public showPage(){};
-	public showPage(cafeTime f){
+	public showPage(cafeTime cafeTimeObj){
 	
-		playPage = f.getPlayPage();
-		
 		setSize(PANEL_WIDTH, PANEL_HEIGHT);
 		setLayout(null);
-		
-		F = f;
 		
 		// Start버튼 생성 & 버튼이미지 추가
 		startBtn = new JButton(){
@@ -39,8 +35,8 @@ public class showPage extends JPanel implements FramePanelSetting{
 		// Start버튼 이벤트 등록
 		startBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				F.getCardLayout().show(F.getContentPane(), "play");
-				F.startThread(playPage);
+				cafeTimeObj.getCardLayout().show(cafeTimeObj.getContentPane(), "play");
+				cafeTimeObj.startThread(cafeTimeObj);
 //				playThread playThread = new playThread();
 //				Thread thread = new Thread(playThread);
 //				thread.start();
@@ -64,7 +60,7 @@ public class showPage extends JPanel implements FramePanelSetting{
 		infoBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				// 클릭했을 경우 발생하는 이벤트로 cafeTime클래스의 메서드를 사용. Panel 변경
-				F.getCardLayout().show(F.getContentPane(), "info");
+				cafeTimeObj.getCardLayout().show(cafeTimeObj.getContentPane(), "info");
 			}
 		});
 		
