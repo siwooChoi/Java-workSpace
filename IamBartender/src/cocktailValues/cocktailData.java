@@ -8,19 +8,13 @@ import panels.playPage;
 public class cocktailData{
 	
 	private String testValue = "TestValue Of coffeeDataObj";
-//	private coffeeData randomCoffee;
 	
-//	private americano americanoObj;
-//	private americanoWithSyrup americanoWithSyrupObj;
-//	private cafeLatte cafeLatteObj;
-//	private espresso espressoObj;
-//	private ArrayList menuList = new ArrayList();
-//	private String[] recipe;
+	private cocktailData ginTonicObj;
+	private cocktailData peachCrushObj;
+	private cocktailData juneBugObj;
+	private cocktailData margaritaObj;
+
 	
-	private cocktailData americanoObj;
-	private cocktailData americanoWithSyrupObj;
-	private cocktailData cafeLatteObj;
-	private cocktailData espressoObj;
 	private ArrayList menuList = new ArrayList();
 	private ArrayList recipe;
 	
@@ -43,15 +37,16 @@ public class cocktailData{
 	
 	public cocktailData(makeCocktail makeCocktailObj){
 		super();
-//		this.americanoObj			= new americano();
-//		this.americanoWithSyrupObj	= new americanoWithSyrup();
-//		this.cafeLatteObj 			= new cafeLatte();
-//		this.espressoObj			= new espresso();
+		this.ginTonicObj	= new ginTonic();
+		this.peachCrushObj 	= new peachCrush();
+		this.juneBugObj		= new juneBug();
+		this.margaritaObj	= new margarita();
+
 		
-//		this.menuList.add(this.americanoObj);  			// 0
-//		this.menuList.add(this.americanoWithSyrupObj);	// 1
-//		this.menuList.add(this.cafeLatteObj);			// 2
-//		this.menuList.add(this.espressoObj);			// 3
+		this.menuList.add(this.ginTonicObj);  			// 0
+		this.menuList.add(this.peachCrushObj);
+		this.menuList.add(this.juneBugObj);
+		this.menuList.add(this.margaritaObj);
 
 	}
 	

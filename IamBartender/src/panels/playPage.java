@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 
 import cocktailValues.cocktailData;
 import components.controlBtns;
+import components.makingBtns;
 import components.valueBtns;
 import components.valueLabels;
 import interfaces.FramePanelSetting;
@@ -24,28 +25,52 @@ public class playPage extends JPanel implements FramePanelSetting{
 	private JLabel labels[];
 	// 각 재료들 값 정의
 	private int     rumValue = 0, ginValue = 0, vodkaValue = 0, tequilaValue = 0, 
-			 whiskyValue = 0, brandyValue = 0, tonicValue = 0,
-			 
-			 
+			 whiskyValue = 0, brandyValue = 0, whiteCuracaoValue = 0, blueCuracaoValue = 0,
+			 peachValue = 0, bananaValue = 0, melonValue = 0, coconutValue = 0,
+			 orangeValue = 0, pineappleValue = 0, limeValue = 0, cranberryValue =0,
+			 sourMixValue = 0, colaValue = 0, spriteValue = 0, tonicValue = 0,
+			 stirValue = 0, shakeValue = 0, blendValue = 0,
 			 scoreValue = 0, timeValue = 0,
 			 moneyValue = 0, testValue = 0;
 	
 //	protected String[] Type = {"Rum", "Gin", "Vodka", "Tequila", "Whisky", "Brandy", ""};
 	
-	private String[] rumStringArray 	= {"Rum", rumValue+""};
-	private String[] ginStringArray 	= {"Gin", ginValue+""};
-	private String[] vodkaStringArray 	= {"Vodka", vodkaValue+""};
-	private String[] tequilaStringArray = {"Tequila", tequilaValue+""};
-	private String[] whiskyStringArray  = {"Whisky", whiskyValue+""};
-	private String[] brandyStringArray 	= {"Brandy", brandyValue+""};
-	
-	private String[] tonicStringArray 	= {"TonicWater", tonicValue+""};
+	private String[] rumStringArray 			= {"Rum", rumValue+""};
+	private String[] ginStringArray 			= {"Gin", ginValue+""};
+	private String[] vodkaStringArray 			= {"Vodka", vodkaValue+""};
+	private String[] tequilaStringArray 		= {"Tequila", tequilaValue+""};
+	private String[] whiskyStringArray 			= {"Whisky", whiskyValue+""};
+	private String[] brandyStringArray 			= {"Brandy", brandyValue+""};
+	private String[] whiteCuracaoStringArray 	= {"WhiteCuracao", whiteCuracaoValue+""};
+	private String[] blueCuracaoStringArray 	= {"BlueCuracao", blueCuracaoValue +""};
+	private String[] peachStringArray 			= {"Peach", peachValue+""};
+	private String[] bananaStringArray 			= {"Banana", bananaValue+""};
+	private String[] melonStringArray 			= {"Melon", melonValue+""};
+	private String[] coconutStringArray 		= {"Coconut", coconutValue+""};
+	private String[] orangeStringArray 			= {"Orange", orangeValue+""};
+	private String[] pineappleStringArray 		= {"Pineapple", pineappleValue+""};
+	private String[] limeStringArray 			= {"Lime", limeValue+""};
+	private String[] cranberryStringArray 		= {"Cranberry", cranberryValue+""};
+	private String[] sourMixStringArray 		= {"SweetSourMix", sourMixValue+""};
+	private String[] colaStringArray 			= {"Cola", colaValue+""};
+	private String[] spriteStringArray 			= {"Sprite", spriteValue+""};
+	private String[] tonicStringArray 			= {"Tonic", tonicValue+""};
+	private String[] stirStringArray 			= {"Stir", stirValue+""};
+	private String[] shakeStringArray 			= {"Shake", shakeValue+""};
+	private String[] blendStringArray 			= {"Blend", blendValue+""};
 
-	private valueLabels   rumLab, ginLab, vodkaLab, tequilaLab, whiskyLab, tonicLab,
-	 				 	  brandyLab, scoreLab, moneyLab;
+	private valueLabels   rumLab, ginLab, vodkaLab, tequilaLab, whiskyLab, brandyLab,
+						 whiteCuracaoLab, blueCuracaoLab, peachLab, bananaLab, melonLab,
+						 coconutLab, orangeLab, pineappleLab, limeLab, cranberryLab,
+						 sourMixLab, colaLab, spriteLab, tonicLab, 
+						 stirLab, shakeLab, blendLab, scoreLab, moneyLab;
 	
 	private valueBtns   runBtn, ginBtn, vodkaBtn, tequilaBtn, whiskyBtn, brandyBtn,
-						tonicBtn;
+						whiteCuracaoBtn, blueCuracaoBtn, peachBtn, bananaBtn, melonBtn,
+						coconutBtn, orangeBtn, pineappleBtn, limeBtn, cranberryBtn,
+						sourMixBtn, colaBtn, spriteBtn, tonicBtn;
+	
+	private makingBtns  stirBtn, shakeBtn, blendBtn;
 	
 	private controlBtns submitBtn, resetBtn, testBtn;
 	
@@ -97,32 +122,81 @@ public class playPage extends JPanel implements FramePanelSetting{
 		///////////////////////////////////////////////////////////////////
 		///////////////////     Labels         ////////////////////////////
 		// Labels(LabelName, Value, position X, position Y);
-		rumLab = new valueLabels("Coffee", rumValue, 30, 25);
+		rumLab = new valueLabels("Rum", rumValue, 30, 25);
 		add(rumLab);
 		
-		ginLab  = new valueLabels("Water ", ginValue, 30, 60);
+		ginLab  = new valueLabels("Gin ", ginValue, 145, 25);
 		add(ginLab);
 		
-		vodkaLab  = new valueLabels("Milk ", vodkaValue, 160, 25);
+		vodkaLab  = new valueLabels("Vodka ", vodkaValue, 250, 25);
 		add(vodkaLab);
 		
-		tequilaLab  = new valueLabels("Syrup ", tequilaValue, 160, 60);
+		tequilaLab  = new valueLabels("Tequila ", tequilaValue, 380, 25);
 		add(tequilaLab);
 		
-		whiskyLab  = new valueLabels("Caramel ", whiskyValue, 290, 25);
+		whiskyLab  = new valueLabels("Whisky ", whiskyValue, 520, 25);
 		add(whiskyLab);
 		
-		brandyLab  = new valueLabels("Steam ", brandyValue, 290, 60);
+		brandyLab  = new valueLabels("Brandy ", brandyValue, 650, 25);
 		add(brandyLab);
 		
-		tonicLab  = new valueLabels("Tonic ", tonicValue, 30, 90);
+		///////
+		whiteCuracaoLab  = new valueLabels("WhiteCuracao", whiteCuracaoValue, 150, 70);
+		add(whiteCuracaoLab);
+		
+		blueCuracaoLab  = new valueLabels("BlueCuracao", blueCuracaoValue, 400, 70);
+		add(blueCuracaoLab);
+		
+		peachLab  = new valueLabels("Peach", peachValue, 110, 115);
+		add(peachLab);
+		
+		bananaLab  = new valueLabels("Banana", bananaValue, 240, 115);
+		add(bananaLab);
+		
+		melonLab  = new valueLabels("Melon ", melonValue, 380, 115);
+		add(melonLab);
+		
+		coconutLab  = new valueLabels("Coconut ", coconutValue, 500, 115);
+		add(coconutLab);
+		
+		orangeLab  = new valueLabels("Orange ", orangeValue, 40, 150);
+		add(orangeLab);
+		
+		pineappleLab  = new valueLabels("Pineapple ", pineappleValue, 180, 150);
+		add(pineappleLab);
+		
+		limeLab  = new valueLabels("Lime ", limeValue, 330, 150);
+		add(limeLab);
+		
+		cranberryLab  = new valueLabels("Cranberry ", cranberryValue, 440, 150);
+		add(cranberryLab);
+		
+		sourMixLab  = new valueLabels("SweetSourMix ", sourMixValue, 25, 190);
+		add(sourMixLab);
+		
+		colaLab  = new valueLabels("Cola ", colaValue, 250, 190);
+		add(colaLab);
+		
+		spriteLab  = new valueLabels("Sprite ", spriteValue, 370, 190);
+		add(spriteLab);
+		
+		tonicLab  = new valueLabels("Tonic ", tonicValue, 490, 190);
 		add(tonicLab);
+		
+		stirLab  = new valueLabels("Stir", stirValue, 705, 320);
+		add(stirLab);
+		
+		shakeLab  = new valueLabels("Shake", shakeValue, 685, 430);
+		add(shakeLab);
+		
+		blendLab  = new valueLabels("Blend", blendValue, 690, 540);
+		add(blendLab);
 		
 		
 		
 		
 		timeLab  = new JLabel();
-		timeLab.setBounds(530, 175, 400, 50);
+		timeLab.setBounds(950, 60, 400, 50);
 		timeLab.setText("timeLab Test");
 		timeLab.setFont(new Font("Dialog",Font.BOLD ,20));
 		timeLab.setForeground(Color.WHITE);
@@ -174,14 +248,14 @@ public class playPage extends JPanel implements FramePanelSetting{
 //		add(order4);
 		
 		orderRecipeTitle = new JLabel();
-		orderRecipeTitle.setBounds(100, 300, 600, 300);
+		orderRecipeTitle.setBounds(100, 300, 800, 1100);
 		orderRecipeTitle.setFont(new Font("Dialog",Font.BOLD ,28));
 		orderRecipeTitle.setForeground(Color.WHITE);
 		orderRecipeTitle.setText("Recipe");
 		add(orderRecipeTitle);
 		
 		orderRecipe = new JLabel();
-		orderRecipe.setBounds(100, 350, 600, 300);
+		orderRecipe.setBounds(100, 350, 2000, 1100);
 		orderRecipe.setFont(new Font("Dialog",Font.BOLD ,24));
 		orderRecipe.setForeground(Color.WHITE);
 		orderRecipe.setText("");
@@ -196,7 +270,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		// 
 		
 		// 럼 값 올리는 버튼
-		runBtn = new valueBtns("img/Rum.jpg", 20, 120);
+		runBtn = new valueBtns("img/Rum.jpg", 20, 250);
 		add(runBtn);
 		
 		runBtn.addActionListener(new ActionListener() {
@@ -232,7 +306,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		});
 		
 		// 진 값  올리는 버튼
-		ginBtn = new valueBtns("img/Gin.jpg", 125, 120);
+		ginBtn = new valueBtns("img/Gin.jpg", 140, 250);
 		add(ginBtn);
 		
 		ginBtn.addActionListener(new ActionListener() {
@@ -269,7 +343,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		
 		
 		// 보드카 값 올리는 버튼
-		vodkaBtn = new valueBtns("img/Vodka.jpg", 230, 120);
+		vodkaBtn = new valueBtns("img/Vodka.jpg", 260, 250);
 		add(vodkaBtn);
 		
 		vodkaBtn.addActionListener(new ActionListener() {
@@ -306,7 +380,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		
 		
 		// 데킬라 값 올리는 버튼
-		tequilaBtn = new valueBtns("img/Tequila.jpg", 335, 120);
+		tequilaBtn = new valueBtns("img/Tequila.jpg", 380, 250);
 		add(tequilaBtn);
 		
 		tequilaBtn.addActionListener(new ActionListener() {
@@ -342,7 +416,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		});
 		
 		// 위스키 값 올리는 버튼
-		whiskyBtn = new valueBtns("img/Whisky.jpg", 440, 120);
+		whiskyBtn = new valueBtns("img/Whisky.jpg", 500, 250);
 		add(whiskyBtn);
 		
 		whiskyBtn.addActionListener(new ActionListener() {
@@ -378,7 +452,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		});
 		
 		// 브랜디 값 올리는 버튼
-		brandyBtn = new valueBtns("img/Brandy.jpg", 545, 120);
+		brandyBtn = new valueBtns("img/Brandy.jpg", 620, 250);
 		add(brandyBtn);
 		
 		brandyBtn.addActionListener(new ActionListener() {
@@ -405,18 +479,463 @@ public class playPage extends JPanel implements FramePanelSetting{
 					} else {
 						makingResult.add(brandyStringArray);
 					}
-					
-				}
-				
+				}	
 				System.out.println(brandyStringArray[0] + brandyStringArray[1]);
 				
 			}
 		});
 		
+		// 화이트큐라소 값 올리는 버튼
+		whiteCuracaoBtn = new valueBtns("img/WthieCuracao.jpg", 180, 310);
+		add(whiteCuracaoBtn);
+		
+		whiteCuracaoBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(whiteCuracaoStringArray[1]);				
+				temp += 10;
+				whiteCuracaoStringArray[1] = temp+"";
+				
+				whiteCuracaoLab.setText("WhiteCuracao" + " : " + whiteCuracaoStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(whiteCuracaoStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(whiteCuracaoStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(whiteCuracaoStringArray);
+					}
+				}	
+				System.out.println(whiteCuracaoStringArray[0] + whiteCuracaoStringArray[1]);
+				
+			}
+		});
+		
+		// 블루큐라소 값 올리는 버튼
+		blueCuracaoBtn = new valueBtns("img/BlueCuracao.jpg", 420, 310);
+		add(blueCuracaoBtn);
+		
+		blueCuracaoBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(blueCuracaoStringArray[1]);				
+				temp += 10;
+				blueCuracaoStringArray[1] = temp+"";
+				
+				blueCuracaoLab.setText("BlueCuracao" + " : " + blueCuracaoStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(blueCuracaoStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(blueCuracaoStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(blueCuracaoStringArray);
+					}
+				}	
+				System.out.println(blueCuracaoStringArray[0] + blueCuracaoStringArray[1]);
+				
+			}
+		});
+		
+		// 피치 값 올리는 버튼
+		peachBtn = new valueBtns("img/Peach.jpg", 100, 370);
+		add(peachBtn);
+		
+		peachBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(peachStringArray[1]);				
+				temp += 10;
+				peachStringArray[1] = temp+"";
+				
+				peachLab.setText("Peach" + " : " + peachStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(peachStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(peachStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(peachStringArray);
+					}
+				}	
+				System.out.println(peachStringArray[0] + peachStringArray[1]);
+				
+			}
+		});
+		
+		// 바나나 값 올리는 버튼
+		bananaBtn = new valueBtns("img/Banana.jpg", 240, 370);
+		add(bananaBtn);
+		
+		bananaBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(bananaStringArray[1]);				
+				temp += 10;
+				bananaStringArray[1] = temp+"";
+				
+				bananaLab.setText("Banana" + " : " + bananaStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(bananaStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(bananaStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(bananaStringArray);
+					}
+				}	
+				System.out.println(bananaStringArray[0] + bananaStringArray[1]);
+				
+			}
+		});
+		
+		// 멜론 값 올리는 버튼
+		melonBtn = new valueBtns("img/Melon.jpg", 380, 370);
+		add(melonBtn);
+		
+		melonBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(melonStringArray[1]);				
+				temp += 10;
+				melonStringArray[1] = temp+"";
+				
+				melonLab.setText("Melon" + " : " + melonStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(melonStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(melonStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(melonStringArray);
+					}
+				}	
+				System.out.println(melonStringArray[0] + melonStringArray[1]);
+				
+			}
+		});
+		
+		// 코코넛 값 올리는 버튼
+		coconutBtn = new valueBtns("img/Coconut.jpg", 530, 370);
+		add(coconutBtn);
+		
+		coconutBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(coconutStringArray[1]);				
+				temp += 10;
+				coconutStringArray[1] = temp+"";
+				
+				coconutLab.setText("Coconut" + " : " + coconutStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(coconutStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(coconutStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(coconutStringArray);
+					}
+				}	
+				System.out.println(coconutStringArray[0] + coconutStringArray[1]);
+				
+			}
+		});
+		
+		// 오렌지 값 올리는 버튼
+		orangeBtn = new valueBtns("img/Orange.jpg", 50, 450);
+		add(orangeBtn);
+		
+		orangeBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(orangeStringArray[1]);				
+				temp += 10;
+				orangeStringArray[1] = temp+"";
+				
+				orangeLab.setText("Orange" + " : " + orangeStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(orangeStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(orangeStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(orangeStringArray);
+					}
+				}	
+				System.out.println(orangeStringArray[0] + orangeStringArray[1]);
+				
+			}
+		});
+		
+		// 파인애플 값 올리는 버튼
+		pineappleBtn = new valueBtns("img/Pineapple.jpg", 190, 450);
+		add(pineappleBtn);
+		
+		pineappleBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(pineappleStringArray[1]);				
+				temp += 10;
+				pineappleStringArray[1] = temp+"";
+				
+				pineappleLab.setText("Pineapple" + " : " + pineappleStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(pineappleStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(pineappleStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(pineappleStringArray);
+					}
+				}	
+				System.out.println(pineappleStringArray[0] + pineappleStringArray[1]);
+				
+			}
+		});
+				
+		// 라임 값 올리는 버튼
+		limeBtn = new valueBtns("img/Lime.jpg", 340, 450);
+		add(limeBtn);
+		
+		limeBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(limeStringArray[1]);				
+				temp += 10;
+				limeStringArray[1] = temp+"";
+				
+				limeLab.setText("Lime" + " : " + limeStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(limeStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(limeStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(limeStringArray);
+					}
+				}	
+				System.out.println(limeStringArray[0] + limeStringArray[1]);
+				
+			}
+		});
+		
+		// 크랜베리 값 올리는 버튼
+		cranberryBtn = new valueBtns("img/Cranberry.jpg", 480, 450);
+		add(cranberryBtn);
+		
+		cranberryBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(cranberryStringArray[1]);				
+				temp += 10;
+				cranberryStringArray[1] = temp+"";
+				
+				cranberryLab.setText("Cranberry" + " : " + cranberryStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(cranberryStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(cranberryStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(cranberryStringArray);
+					}
+				}	
+				System.out.println(cranberryStringArray[0] + cranberryStringArray[1]);
+				
+			}
+		});
 		
 		
 		// 토닉워터 값 올리는 버튼
-		tonicBtn = new valueBtns("img/Tonic.jpg", 20, 190);
+		sourMixBtn = new valueBtns("img/SnS.jpg", 90, 510);
+		add(sourMixBtn);
+		
+		sourMixBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(sourMixStringArray[1]);				
+				temp += 10;
+				sourMixStringArray[1] = temp+"";
+				
+				sourMixLab.setText("SweetSourMix" + " : " + sourMixStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(sourMixStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(sourMixStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(sourMixStringArray);
+					}
+					
+				}
+				
+				System.out.println(sourMixStringArray[0] + sourMixStringArray[1]);
+				
+			}
+		});
+		
+		// 콜라 값 올리는 버튼
+		colaBtn = new valueBtns("img/Cola.jpg", 230, 510);
+		add(colaBtn);
+		
+		colaBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(colaStringArray[1]);				
+				temp += 10;
+				colaStringArray[1] = temp+"";
+				
+				colaLab.setText("Cola" + " : " + colaStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(colaStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(colaStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(colaStringArray);
+					}
+					
+				}
+				
+				System.out.println(colaStringArray[0] + colaStringArray[1]);
+				
+			}
+		});
+		
+		// 스프라이트 값 올리는 버튼
+		spriteBtn = new valueBtns("img/Sprite.jpg", 370, 510);
+		add(spriteBtn);
+		
+		spriteBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(spriteStringArray[1]);				
+				temp += 10;
+				spriteStringArray[1] = temp+"";
+				
+				spriteLab.setText("Sprite" + " : " + spriteStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(spriteStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(spriteStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(spriteStringArray);
+					}
+					
+				}
+				
+				System.out.println(spriteStringArray[0] + spriteStringArray[1]);
+				
+			}
+		});
+		
+		// 토닉워터 값 올리는 버튼
+		tonicBtn = new valueBtns("img/Tonic.jpg", 510, 510);
 		add(tonicBtn);
 		
 		tonicBtn.addActionListener(new ActionListener() {
@@ -451,7 +970,113 @@ public class playPage extends JPanel implements FramePanelSetting{
 			}
 		});
 		
+		// Stir 값 올리는 버튼
+		stirBtn = new makingBtns("img/Stir.jpg", 800, 240);
+		add(stirBtn);
+		
+		stirBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(stirStringArray[1]);				
+				temp += 10;
+				stirStringArray[1] = temp+"";
+				
+				stirLab.setText("Stir" + " : " + stirStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(stirStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(stirStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(stirStringArray);
+					}
+					
+				}
+				
+				System.out.println(stirStringArray[0] + stirStringArray[1]);
+				
+			}
+		});
 	
+		// Shake 값 올리는 버튼
+		shakeBtn = new makingBtns("img/Shake.jpg", 800, 350);
+		add(shakeBtn);
+		
+		shakeBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(shakeStringArray[1]);				
+				temp += 10;
+				shakeStringArray[1] = temp+"";
+				
+				shakeLab.setText("Shake" + " : " + shakeStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(shakeStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(shakeStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(shakeStringArray);
+					}
+					
+				}
+				
+				System.out.println(shakeStringArray[0] + shakeStringArray[1]);
+				
+			}
+		});
+		
+		// blend 값 올리는 버튼
+		blendBtn = new makingBtns("img/Blender.jpg", 800, 460);
+		add(blendBtn);
+		
+		blendBtn.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				int temp = Integer.parseInt(blendStringArray[1]);				
+				temp += 10;
+				blendStringArray[1] = temp+"";
+				
+				blendLab.setText("Blend" + " : " + blendStringArray[1]);
+				
+				if(makingResult == null || makingResult.size() < 1){
+					makingResult = new ArrayList();
+					makingResult.add(blendStringArray);
+				} 
+				else {
+					// 만들고 있는 재료 배열에 해당 재료의 값이 있는지 없는지 판단. 
+					// false 없다, 추가해야한다   // true 있다, 추가하지않아도 된다.
+					boolean flag = searchMakingList(blendStringArray);
+					// 
+					if(flag){
+						
+					} else {
+						makingResult.add(blendStringArray);
+					}
+					
+				}
+				
+				System.out.println(blendStringArray[0] + blendStringArray[1]);
+				
+			}
+		});
 				
 		
 		
@@ -460,7 +1085,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		
 		
 		// 제출 버튼
-		submitBtn = new controlBtns("img/Submit.jpg", 200, 270);
+		submitBtn = new controlBtns("img/Submit.jpg", 680, 130);
 		add(submitBtn);
 		submitBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -475,7 +1100,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		});
 		
 		// 값 제거버튼
-		resetBtn = new controlBtns("img/Reset.jpg", 350, 270);
+		resetBtn = new controlBtns("img/Reset.jpg", 795, 130);
 		add(resetBtn);
 		resetBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -530,8 +1155,8 @@ public class playPage extends JPanel implements FramePanelSetting{
 //			this.setOrderRecipeLabel((String) this.orderList.get(0).toString(), this.orderList);
 //		}
 		
-		for(int x = 0, y = 80; x < labels.length; x++, y +=40){
-			labels[x].setBounds(650, y, 400, 300);
+		for(int x = 0, y = 10; x < labels.length; x++, y +=40){
+			labels[x].setBounds(1050, y, 400, 300);
 			labels[x].setText("   ");
 			labels[x].setFont(new Font("Dialog",Font.BOLD ,20));
 			labels[x].setForeground(Color.WHITE);			
@@ -590,7 +1215,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		return flag;
 	}
 	
-	// 주문받은 커피와  만드는 재료가 일치하는지 판단
+	// 주문받은 칵테일과  만드는 재료가 일치하는지 판단
 	public void checkSubmit(){
 		boolean flag = false;
 		// 만들기 성공 했을때 첫번째 목록 제거한 뒤, 주문리스트 라벨 갱신하기
@@ -657,16 +1282,48 @@ public class playPage extends JPanel implements FramePanelSetting{
 		tequilaStringArray[1] = 0+"";
 		whiskyStringArray[1] = 0+"";
 		brandyStringArray[1] = 0+"";
+		whiteCuracaoStringArray[1] = 0+"";
+		blueCuracaoStringArray[1] = 0+"";
+		peachStringArray[1] = 0+"";
+		bananaStringArray[1] = 0+"";
+		melonStringArray[1] = 0+"";
+		coconutStringArray[1] = 0+"";
+		orangeStringArray[1] = 0+"";
+		pineappleStringArray[1] = 0+"";
+		limeStringArray[1] = 0+"";
+		cranberryStringArray[1] = 0+"";
+		sourMixStringArray[1] = 0+"";
+		colaStringArray[1] = 0+"";
+		spriteStringArray[1] = 0+"";
 		tonicStringArray[1] = 0+"";
+		stirStringArray[1] = 0+"";
+		shakeStringArray[1] = 0+"";
+		blendStringArray[1] = 0+"";
 		
-		
-		rumLab.setText("Coffee" + " : " + rumStringArray[1]);
-		ginLab.setText("Water" + " : " + ginStringArray[1]);
-		vodkaLab.setText("Milk" + " : " + vodkaStringArray[1]);
-		tequilaLab.setText("Syrup" + " : " + tequilaStringArray[1]);
-		whiskyLab.setText("Caramel" + " : " + whiskyStringArray[1]);
-		brandyLab.setText("Steam" + " : " + brandyStringArray[1]);
+		rumLab.setText("Rum" + " : " + rumStringArray[1]);
+		ginLab.setText("Gin" + " : " + ginStringArray[1]);
+		vodkaLab.setText("Vodka" + " : " + vodkaStringArray[1]);
+		tequilaLab.setText("Tequila" + " : " + tequilaStringArray[1]);
+		whiskyLab.setText("Whisky" + " : " + whiskyStringArray[1]);
+		brandyLab.setText("Brandy" + " : " + brandyStringArray[1]);
+		whiteCuracaoLab.setText("WhiteCuracao" + " : " + whiteCuracaoStringArray[1]);
+		blueCuracaoLab.setText("BlueCuracao" + " : " + blueCuracaoStringArray[1]);
+		peachLab.setText("Peach" + " : " + peachStringArray[1]);
+		bananaLab.setText("Banana" + " : " + bananaStringArray[1]);
+		melonLab.setText("Melon" + " : " + melonStringArray[1]);
+		coconutLab.setText("Coconut" + " : " + coconutStringArray[1]);
+		orangeLab.setText("Orange" + " : " + orangeStringArray[1]);
+		pineappleLab.setText("Pineapple" + " : " + pineappleStringArray[1]);
+		limeLab.setText("Lime" + " : " + limeStringArray[1]);
+		cranberryLab.setText("Cranberry" + " : " + cranberryStringArray[1]);
+		sourMixLab.setText("SweetSourMix" + " : " + sourMixStringArray[1]);
+		colaLab.setText("Cola" + " : " + colaStringArray[1]);
+		spriteLab.setText("Sprite" + " : " + spriteStringArray[1]);
 		tonicLab.setText("Tonic" + " : " + tonicStringArray[1]);
+		stirLab.setText("Stir" + " : " + stirStringArray[1]);
+		shakeLab.setText("Shake" + " : " + shakeStringArray[1]);
+		blendLab.setText("Blend" + " : " + blendStringArray[1]);
+		
 		
 		makingResult.clear();	
 	}

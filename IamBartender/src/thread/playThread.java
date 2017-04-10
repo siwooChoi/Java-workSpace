@@ -40,7 +40,7 @@ public class playThread extends playPage implements Runnable{
 	          //랜덤하게 일정시간 멈추게 하는 부분   
 	        	 
 //	        	  int secs = ((int)(Math.random() * (7 - 3 + 1)) + 3);
-				int secs = ((int)(Math.random() * 2)); 
+				int secs = ((int)(Math.random() * 10)); 
 	        	  System.out.println("(" + secs + "초 후에 주문이 들어옵니다.)"); 
 //	              System.out.println("메뉴리스트 사이즈 : " + menuList.size());
 	         
@@ -64,7 +64,7 @@ public class playThread extends playPage implements Runnable{
 	                
 	                playPageObj.setOrderLabel(this.orderList);
 	                
-	                if(this.orderList.size() > 8){
+	                if(this.orderList.size() > 10){
 	                	this.makeCocktailObj.stopThread();
 	                	flag = false;
 	                	this.playPageObj.resetMaking();

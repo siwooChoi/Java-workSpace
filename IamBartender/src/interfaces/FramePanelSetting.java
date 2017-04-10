@@ -32,4 +32,7 @@ public interface FramePanelSetting {
 	
 	int CONTROL_BTN_WIDTH  = 100;
 	int CONTROL_BTN_HEIGHT = 60;
+	
+	int MAKING_BTN_WIDTH = 110;
+	int MAKING_BTN_HEIGHT = 110;
 }
