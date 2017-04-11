@@ -13,7 +13,6 @@ public class margarita extends cocktailData{
 	
 	
 	public margarita(){
-//		System.out.println("아메객체 생성");
 		this.recipe.add(tequilaStringArray);
 		this.recipe.add(whiteCuracaoStringArray);
 		this.recipe.add(limeStringArray);

@@ -13,6 +13,11 @@ public class cocktailData{
 	private cocktailData peachCrushObj;
 	private cocktailData juneBugObj;
 	private cocktailData margaritaObj;
+	private cocktailData blueSapphireObj;
+	private cocktailData rumCokeObj;
+	private cocktailData cosmopolitanObj;
+	private cocktailData midoriSourObj;
+	private cocktailData longIslandIcedTeaObj;
 
 	
 	private ArrayList menuList = new ArrayList();
@@ -37,16 +42,25 @@ public class cocktailData{
 	
 	public cocktailData(makeCocktail makeCocktailObj){
 		super();
-		this.ginTonicObj	= new ginTonic();
-		this.peachCrushObj 	= new peachCrush();
-		this.juneBugObj		= new juneBug();
-		this.margaritaObj	= new margarita();
-
+		this.ginTonicObj	 = new ginTonic();
+		this.peachCrushObj 	 = new peachCrush();
+		this.juneBugObj		 = new juneBug();
+		this.margaritaObj	 = new margarita();
+		this.blueSapphireObj = new blueSapphire();
+		this.rumCokeObj		 = new rumCoke();
+		this.cosmopolitanObj = new cosmopolitan();
+		this.midoriSourObj	 = new midoriSour();
+		this.longIslandIcedTeaObj = new longIslandIcedTea();
 		
 		this.menuList.add(this.ginTonicObj);  			// 0
 		this.menuList.add(this.peachCrushObj);
 		this.menuList.add(this.juneBugObj);
 		this.menuList.add(this.margaritaObj);
+		this.menuList.add(this.blueSapphireObj);
+		this.menuList.add(this.rumCokeObj);
+		this.menuList.add(this.cosmopolitanObj);
+		this.menuList.add(this.midoriSourObj);
+		this.menuList.add(this.longIslandIcedTeaObj);
 
 	}
 	

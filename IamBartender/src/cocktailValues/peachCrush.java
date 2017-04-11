@@ -15,7 +15,6 @@ public class peachCrush extends cocktailData{
 	
 	
 	public peachCrush(){
-//		System.out.println("아메객체 생성");
 		this.recipe.add(peachStringArray);
 		this.recipe.add(coconutStringArray);
 		this.recipe.add(limeStringArray);

@@ -13,7 +13,6 @@ public class ginTonic extends cocktailData{
 	
 	
 	public ginTonic(){
-//		System.out.println("아메객체 생성");
 		this.recipe.add(ginStringArray);
 		this.recipe.add(tonicStringArray);
 		this.recipe.add(stirStringArray);
