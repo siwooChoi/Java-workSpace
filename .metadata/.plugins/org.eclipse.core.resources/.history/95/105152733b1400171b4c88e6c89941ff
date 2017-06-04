@@ -1,7 +1,0 @@
-package coffeeValues;
-
-import main.gameManager;
-
-public class coffeeData{
-	
-}

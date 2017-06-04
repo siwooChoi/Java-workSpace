@@ -19,7 +19,7 @@ public class showPage extends JPanel implements FramePanelSetting{
 	
 	
 //	public showPage(){};
-	public showPage(makeCocktail cafeTimeObj){
+	public showPage(makeCocktail makeCocktailObj){
 	
 		setSize(PANEL_WIDTH, PANEL_HEIGHT);
 		setLayout(null);
@@ -35,8 +35,8 @@ public class showPage extends JPanel implements FramePanelSetting{
 		// Start버튼 이벤트 등록
 		startBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				cafeTimeObj.getCardLayout().show(cafeTimeObj.getContentPane(), "play");
-				cafeTimeObj.startThread(cafeTimeObj);
+				makeCocktailObj.getCardLayout().show(makeCocktailObj.getContentPane(), "play");
+				makeCocktailObj.startThread(makeCocktailObj);
 //				playThread playThread = new playThread();
 //				Thread thread = new Thread(playThread);
 //				thread.start();
@@ -60,7 +60,7 @@ public class showPage extends JPanel implements FramePanelSetting{
 		infoBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				// 클릭했을 경우 발생하는 이벤트로 cafeTime클래스의 메서드를 사용. Panel 변경
-				cafeTimeObj.getCardLayout().show(cafeTimeObj.getContentPane(), "info");
+				makeCocktailObj.getCardLayout().show(makeCocktailObj.getContentPane(), "info");
 			}
 		});
 		

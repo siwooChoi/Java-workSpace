@@ -19,7 +19,6 @@ import main.makeCocktail;
 
 public class playPage extends JPanel implements FramePanelSetting{
 	
-//	private cafeTime cafeTimeObj;
 	
 	private JLabel timeLab, orderLabel, order1, order2, order3, order4, order5, order6, order7, order8, orderRecipeTitle, orderRecipe, test;
 	private JLabel labels[];
@@ -82,10 +81,10 @@ public class playPage extends JPanel implements FramePanelSetting{
 	private ArrayList makingResult;
 	private cocktailData nowOrderData;
 	private String[] StringMakingResult;
-	
-	
-	
-	private makeCocktail cafeTimeObj;
+		
+	private makeCocktail makeCocktailObj;
+	private int lastScore;
+	private int gameOverPoint = -200;
 
 
 	
@@ -93,8 +92,10 @@ public class playPage extends JPanel implements FramePanelSetting{
 	
 	public playPage(makeCocktail makeCocktailObj){
 		super();
-		this.cafeTimeObj = makeCocktailObj;
+		this.makeCocktailObj = makeCocktailObj;
 		this.cocktailDataObj = makeCocktailObj.getCocktailDataObj();
+		
+		// 주문들어오는 라벨들 담는 배열
 		this.labels = new JLabel[8];
 //		this.makingResult = new ArrayList();
 		
@@ -192,6 +193,8 @@ public class playPage extends JPanel implements FramePanelSetting{
 		blendLab  = new valueLabels("Blend", blendValue, 690, 540);
 		add(blendLab);
 		
+		scoreLab = new valueLabels("Score", scoreValue, 1100, 30);
+		add(scoreLab);
 		
 		
 		
@@ -208,18 +211,18 @@ public class playPage extends JPanel implements FramePanelSetting{
 		order3 = new JLabel();
 		order4 = new JLabel();
 		order5 = new JLabel();
-		order6= new JLabel();
-		order7= new JLabel();
+		order6 = new JLabel();
+		order7 = new JLabel();
 		order8 = new JLabel();
 		
 		this.labels[0] = order1;
 		this.labels[1] = order2;
-		this.labels[2] = (order3);
-		this.labels[3] = (order4);
-		this.labels[4] = (order5);
-		this.labels[5] = (order6);
-		this.labels[6] = (order7);
-		this.labels[7] = (order8);
+		this.labels[2] = order3;
+		this.labels[3] = order4;
+		this.labels[4] = order5;
+		this.labels[5] = order6;
+		this.labels[6] = order7;
+		this.labels[7] = order8;
 //		order1.setBounds(600, 30, 400, 300);
 //		order1.setText("주문 대기중 1");
 //		order1.setFont(new Font("Dialog",Font.BOLD ,20));
@@ -1081,9 +1084,6 @@ public class playPage extends JPanel implements FramePanelSetting{
 		
 		
 		//////		컨트롤 버튼	 new controlBtns("이미지이름", x좌표, y좌표);	//////
-		
-		
-		
 		// 제출 버튼
 		submitBtn = new controlBtns("img/Submit.jpg", 680, 130);
 		add(submitBtn);
@@ -1105,6 +1105,8 @@ public class playPage extends JPanel implements FramePanelSetting{
 		resetBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				resetMaking();				
+				ScoreManage(-30);
+				
 			}
 		});
 		
@@ -1112,7 +1114,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		setVisible(true);
 	}
 	
-		
+	
 	// 스레드에서 호출하는 시간Label값 바뀌게 하는 메서드
 	public void setTimeLabel(int time){
 		timeLab.setText("(" + time + "초 후에 주문이 들어옵니다.)");
@@ -1121,7 +1123,9 @@ public class playPage extends JPanel implements FramePanelSetting{
 	// 주문 대기표 Label 바뀌게 하는 메서드
 	public void setOrderLabel(ArrayList order){
 		this.orderList = order;
-		
+		if(order.size() > 8){
+			
+		}
 //		if(this.orderList.size() == 1){
 //			this.order1.setText((String) this.orderList.get(0).toString());
 //			this.order2.setText("주문 대기중");
@@ -1165,8 +1169,14 @@ public class playPage extends JPanel implements FramePanelSetting{
 		}
 		
 		for(int x = 0; x < this.orderList.size(); x++){
-			labels[x].setText((String) this.orderList.get(x).toString());
-			this.setOrderRecipeLabel((String) this.orderList.get(0).toString(), this.orderList);
+			if(x < 8){
+				labels[x].setText((String) this.orderList.get(x).toString());
+				this.setOrderRecipeLabel((String) this.orderList.get(0).toString(), this.orderList);
+			} else if(x >= 8){
+				makeCocktailObj.stopThread();
+				System.out.println("게임오버");
+				
+			}
 		}
 		
 	
@@ -1231,28 +1241,47 @@ public class playPage extends JPanel implements FramePanelSetting{
 			}
 			
 			
-			if(this.nowOrderData.getRecipe().size() == makingResult.size()){
+			if(this.nowOrderData != null && makingResult != null && this.nowOrderData.getRecipe().size() == makingResult.size()){
 				flag = this.checkValues();
+				
 				if(flag){
 					this.orderList.remove(0);
 					this.setOrderLabel(this.orderList);
+					ScoreManage(200);
+					scoreLab.setText("Score : " + scoreValue);
 					System.out.println("성공");
+				} else if(makingResult.equals(null)){
+					System.out.println("실패 else if");	
+					ScoreManage(-50);
 				} else{
-					System.out.println("실패");	
+					System.out.println("실패  else");	
+					ScoreManage(-50);
 				}
+				
+			} else if(makingResult == null || makingResult.size() == 0){
+				System.out.println("tttttt elseIf");	
+				ScoreManage(-50);
+			} else {
+				System.out.println("tttttt else");	
+				ScoreManage(-50);
 			}
 		
 			this.setOrderLabel(this.orderList);
-		} else{
-			System.out.println("아직 주문이 들어오지 않았습니다.");
+		} else if (makingResult == null || makingResult.size() == 0) {
+			System.out.println("checkSubmit  else if");
+			ScoreManage(-50);
+		}else{
+
+			System.out.println("checkSubmit  else");
+			ScoreManage(-50);
 		}
 	}
-	
 	
 	// 해당 커피의 레시피와  현재 만들고있는 재료의  값들이 일치하는지 비교
 	private boolean checkValues(){		
 		boolean flag = false;
 	
+			
 			// ArrayList인 makingResult의 사이즈 만큼 반복하여 값들을 비교할 수 있는 값으로 변경 
 			for(int x = 0; x < makingResult.size(); x++){
 				String[] orderValue = (String[])this.nowOrderData.getRecipe().get(x);
@@ -1263,19 +1292,41 @@ public class playPage extends JPanel implements FramePanelSetting{
 //					System.out.println("오더 : " + orderValue[y]);
 //					System.out.println("메킹 : " + makeValue[y]);
 					if(orderValue[y].equals(makeValue[y])){
-						flag = true;
+						flag = true;					
 					} else{
 						flag = false;
-						break;
+						continue;
 					}
 				}
-				
+		
 			}
 		return flag;
 	}
 	
+	// Score 증가, 감소 관리
+	private void ScoreManage(int argValue){
+		scoreValue = scoreValue + argValue;
+		lastScore = scoreValue;
+		scoreLab.setText("Score : " + scoreValue);
+		// 점수가 gameOverPoint 이하라면  스레드멈추고 게임오버
+		if(scoreValue < gameOverPoint){
+			System.out.println("스레드 멈추기");
+			makeCocktailObj.stopThread();
+		}
+	}
+	
+	// 점수 초기화하기
+	public void resetScore(){
+		scoreValue = 0;
+		scoreLab.setText("Score : " + scoreValue);
+	}
+	
 	// 리셋 버튼을 누르거나,  제출하기를 눌렀을 때  저장되어있던 재료값들 초기화
 	public void resetMaking(){
+		if(makingResult == null || makingResult.size() < 1){
+			
+		} else{
+		
 		rumStringArray[1] = 0+"";
 		ginStringArray[1] = 0+"";
 		vodkaStringArray[1] = 0+"";
@@ -1326,6 +1377,7 @@ public class playPage extends JPanel implements FramePanelSetting{
 		
 		
 		makingResult.clear();	
+		}
 	}
 	
 

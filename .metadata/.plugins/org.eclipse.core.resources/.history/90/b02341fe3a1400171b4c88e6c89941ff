@@ -1,9 +1,0 @@
-package coffeeValues;
-
-import main.gameManager;
-
-public class coffeeData{
-	public testValue1(){
-		this.test();
-	}
-}

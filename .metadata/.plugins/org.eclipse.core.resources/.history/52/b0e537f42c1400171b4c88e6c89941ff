@@ -1,9 +1,0 @@
-package main;
-
-public class index {
-	public static void main(String[] args){
-		gameManager player = new gameManager();
-		
-		
-	}
-}

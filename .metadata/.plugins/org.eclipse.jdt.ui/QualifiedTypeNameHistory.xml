@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="NValues"/>
-<fullyQualifiedTypeName name="cyka"/>
-<fullyQualifiedTypeName name="setPrec.PrecOfMain"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="studentPoint.pointM"/>
 <fullyQualifiedTypeName name="test2.StudentScore"/>
@@ -59,5 +54,10 @@
 <fullyQualifiedTypeName name="interfaces.FramePanelSetting"/>
 <fullyQualifiedTypeName name="main.gameManager"/>
 <fullyQualifiedTypeName name="coffeeValues.Amaricano"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="panels.playPage"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

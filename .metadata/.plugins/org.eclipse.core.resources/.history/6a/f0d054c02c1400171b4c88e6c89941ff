@@ -1,8 +1,0 @@
-package main;
-
-public class index {
-	public static void main(String[] args){
-		cafeTime cafeTime = new cafeTime();
-		
-	}
-}
