@@ -39,8 +39,8 @@ public class playThread extends playPage implements Runnable{
 	          //((int)(Math.random() * (최대값 - 최소값 + 1)) + 최소값); --> 최소값 ~ 최대값 사이 랜덤 
 	          //랜덤하게 일정시간 멈추게 하는 부분   
 	        	 
-//	        	  int secs = ((int)(Math.random() * (7 - 3 + 1)) + 3);
-				int secs = ((int)(Math.random() * 1)); 
+	        	  int secs = ((int)(Math.random() * (7 - 3 + 1)) + 3);
+//				int secs = ((int)(Math.random() * 1)); 
 	        	  System.out.println("(" + secs + "초 후에 주문이 들어옵니다.)"); 
 //	              System.out.println("메뉴리스트 사이즈 : " + menuList.size());
 	         
